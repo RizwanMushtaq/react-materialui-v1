@@ -15,7 +15,7 @@ import MyCV from '../images/CV_Rizwan.pdf'
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 250,
+    maxWidth: 975,
   },
   media: {
     height: 180,
@@ -30,37 +30,38 @@ const useStyles = makeStyles({
   cvDownload: {
     width: '200px',
   },
+  topPanel: {
+      display: 'flex',
+  }
 });
 
-export default function MyId() {
+export default function AboutMe() {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
-      <CardActionArea>
-
-        {/* <CardMedia
-          className={classes.media}
-          image={MyPic}
-          title="Rizwan"
-        /> */}
-        <div className={classes.media}>
-            <MyAvatar/>
-        </div>
+      
         
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Rizwan Mushtaq
-          </Typography>
-          <Typography gutterBottom variant="h6" component="h4">
-            Front End Web Developer
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Passionate about developing a successfull Web Application
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions className={classes.cardActions}>
+            {/* <MyAvatar/> */}
+        
+        
+       
+        {/* <Typography component={'span'} gutterBottom variant="h5">
+          Rizwan Mushtaq
+        </Typography>
+        <Typography component={'span'} gutterBottom variant="h6">
+          Front End Web Developer
+        </Typography>
+        <Typography component={'span'} variant="body2" color="textSecondary">
+          Passionate about developing a successfull Web Application
+        </Typography>
+        
+      
+        <Typography component={'span'}>
+            I am front end Web Developer based in Munich Germany.jjjjjjjjjjjjjjjjjjjjjjjjjjj
+        </Typography>
+
+      
         <Button 
         size="small" 
         color="primary" 
@@ -69,8 +70,8 @@ export default function MyId() {
         startIcon={<CloudDownload />}
         onClick={()=>window.open(MyCV, '_blank')}>
           CV
-        </Button>
-      </CardActions>
+        </Button> */}
+
     </Card>
   );
 }

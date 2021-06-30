@@ -7,6 +7,12 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
+import MyProject from './MyProject';
+import AboutMe from './AboutMe';
+import MyContact from './MyContact';
+import Formspree from './Formspree';
+import { display } from '@material-ui/system';
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -57,6 +63,12 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
   },
+  myTab: {
+    backgroundColor: '#cfe8fc',
+    display: 'flex',
+    flexDirection: 'column',
+    overflow: 'hidden',
+  },
 }));
 
 export default function MyTabs() {
@@ -81,14 +93,16 @@ export default function MyTabs() {
           <LinkTab label="Contact" href="/spam" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
-        Page One
+      <TabPanel value={value} index={0} className={classes.myTab}>
+        {/* <MyProject />
+        <MyProject /> */}
       </TabPanel>
-      <TabPanel value={value} index={1}>
-        Page Two
+      <TabPanel value={value} index={1} className={classes.myTab}>
+        {/* <AboutMe /> */}
       </TabPanel>
-      <TabPanel value={value} index={2}>
-        Page Three
+      <TabPanel value={value} index={2} className={classes.myTab} component='div'>
+        <MyContact />
+        {/* <Formspree /> */}
       </TabPanel>
     </div>
   );
